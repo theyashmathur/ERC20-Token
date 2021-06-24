@@ -6,7 +6,7 @@ contract Owned {
         require(msg.sender == owner);
         _;
     }
-    address owner;
+    address public owner;
    
     function changeOwnership(address payable _newOwner) public onlyOwner {
         owner = _newOwner;
